@@ -4,6 +4,11 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Livewire\Livewire;
+
+Livewire::setUpdateRoute(function ($handle) {
+    return Route::post('livewire-project/public/livewire/update', $handle);
+});
 
 Route::prefix('/')->name('front.')->group(function () {
     Route::get('/', [FrontController::class, 'index'])->name('home');
@@ -16,7 +21,11 @@ Route::prefix('/')->name('front.')->group(function () {
 });
 
 Route::prefix('/admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::middleware('admin')->group(function () {
+        Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+    });
+
+    Route::get('/login', [AdminController::class, 'login'])->middleware('guest:admin')->name('login');
 
 });
 
