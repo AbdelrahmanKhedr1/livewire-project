@@ -1,5 +1,6 @@
 @extends('admin.master')
-
+@section('dashboard-active','active')
+@section('title','Dashboard')
 @section('content')
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
