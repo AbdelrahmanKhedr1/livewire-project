@@ -19,7 +19,7 @@ class SkillsUpdate extends Component
     }
     public function rules(){
         return [
-            'name' => ['required'],
+            'name' => ['required','min:1','max:200'],
             'progress'=>['required','numeric','min:1','max:100']
         ];
     }
