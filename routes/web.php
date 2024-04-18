@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SkillsController;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::get('/', [AdminController::class, 'index'])->name('dashboard');
         Route::get('/setting', [SettingController::class, 'index'])->name('setting');
+        Route::resource('/skills', SkillsController::class);
     });
 
     Route::get('/login', [AdminController::class, 'login'])->middleware('guest:admin')->name('login');

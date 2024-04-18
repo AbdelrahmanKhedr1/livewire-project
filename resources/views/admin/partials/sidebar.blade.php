@@ -74,6 +74,14 @@
                             <div data-i18n="Analytics">Setting</div>
                         </a>
                     </li>
+                    <!-- Skills -->
+                    <li class="menu-item @yield('skills-active')">
+                        <a href="{{route('admin.skills.index')}}" class="menu-link">
+                            <i class='menu-icon tf-icons bx bx-bar-chart-alt-2' ></i>
+                            {{-- <i class='bx bx-bar-chart-alt-2'></i> --}}
+                            <div data-i18n="Analytics">Skills</div>
+                        </a>
+                    </li>
 
                     <li class="menu-header small text-uppercase">
                         <span class="menu-header-text">Pages</span>
