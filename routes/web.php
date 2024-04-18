@@ -25,8 +25,9 @@ Route::prefix('/')->name('front.')->group(function () {
 Route::prefix('/admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::get('/', [AdminController::class, 'index'])->name('dashboard');
-        Route::get('/setting', [SettingController::class, 'index'])->name('setting');
-        Route::resource('/skills', SkillsController::class);
+        Route::get('/setting', [AdminController::class, 'setting'])->name('setting');
+        Route::get('/skills', [AdminController::class, 'skills'])->name('skills');
+        Route::get('/subscriber', [AdminController::class, 'subscriber'])->name('subscriber');
     });
 
     Route::get('/login', [AdminController::class, 'login'])->middleware('guest:admin')->name('login');

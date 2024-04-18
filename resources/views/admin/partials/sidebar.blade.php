@@ -76,10 +76,16 @@
                     </li>
                     <!-- Skills -->
                     <li class="menu-item @yield('skills-active')">
-                        <a href="{{route('admin.skills.index')}}" class="menu-link">
+                        <a href="{{route('admin.skills')}}" class="menu-link">
                             <i class='menu-icon tf-icons bx bx-bar-chart-alt-2' ></i>
-                            {{-- <i class='bx bx-bar-chart-alt-2'></i> --}}
                             <div data-i18n="Analytics">Skills</div>
+                        </a>
+                    </li>
+                    <!-- Subscriber -->
+                    <li class="menu-item @yield('subscriber-active')">
+                        <a href="{{route('admin.subscriber')}}" class="menu-link">
+                            <i class='menu-icon tf-icons bx bx-user-circle'></i>
+                            <div data-i18n="Analytics">Subscriber</div>
                         </a>
                     </li>
 
