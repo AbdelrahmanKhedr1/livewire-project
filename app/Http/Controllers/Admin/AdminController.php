@@ -24,4 +24,8 @@ class AdminController extends Controller
     {
         return view('admin.subscriber.index');
     }
+    public function counters()
+    {
+        return view('admin.counters.index');
+    }
 }

@@ -22,7 +22,7 @@
                 <tbody class="table-border-bottom-0">
                     @foreach ($data as $item)
                         <tr>
-                            <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
+                            <td>
                                 <strong>{{ $item->email }}</strong>
                             </td>
                             <td>

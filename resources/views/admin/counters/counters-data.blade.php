@@ -15,8 +15,9 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th width='42%'>Name</th>
-                        <th width='42%'>Progress</th>
+                        <th width='50%'>Name</th>
+                        <th width='20%'>Count</th>
+                        <th width='20%'>Icon</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -26,7 +27,11 @@
                             <td>
                                 <strong>{{ $item->name }}</strong>
                             </td>
-                            <td>{{ $item->progress }} </td>
+                            <td>{{ $item->count }} </td>
+                            <td>
+
+                                <i class="{{ $item->icon }}"></i>
+                            </td>
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
@@ -34,15 +39,12 @@
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#" wire:click.prevent="$dispatch('skillUpdate',{id:{{$item->id}}})">
+                                        <a class="dropdown-item" href="#" wire:click.prevent="$dispatch('countersUpdate',{id:{{$item->id}}})">
                                             <i class="bx bx-edit-alt me-1"></i> Edit
                                         </a>
-                                        <a class="dropdown-item" href="#" wire:click.prevent="$dispatch('skillDelete',{id:{{$item->id}}})">
+                                        <a class="dropdown-item" href="#" wire:click.prevent="$dispatch('countersDelete',{id:{{$item->id}}})">
                                             <i class="bx bx-trash me-1"></i>
                                             Delete</a>
-                                        <a class="dropdown-item" href="#" wire:click.prevent="$dispatch('skillShow',{id:{{$item->id}}})">
-                                            <i class='bx bx-show-alt'></i>
-                                            Show</a>
                                     </div>
                                 </div>
                             </td>
@@ -57,3 +59,4 @@
     @endif
 </div>
 <!--/ Basic Bootstrap Table -->
+
