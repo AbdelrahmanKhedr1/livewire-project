@@ -32,4 +32,8 @@ class AdminController extends Controller
     {
         return view('admin.services.index');
     }
+    public function messages()
+    {
+        return view('admin.messages.index');
+    }
 }

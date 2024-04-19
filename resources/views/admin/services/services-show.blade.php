@@ -1,4 +1,4 @@
-<x-admin.modal-show id="show" titleName="show your skill">
+<x-admin.modal-show id="show" titleName="show your Service">
     <div class="row mb-3">
         <div class="col ">
             <label for="nameBasic" class="form-label">Name : </label>

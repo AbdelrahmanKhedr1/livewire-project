@@ -30,6 +30,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::get('/subscriber', [AdminController::class, 'subscriber'])->name('subscriber');
         Route::get('/counters', [AdminController::class, 'counters'])->name('counters');
         Route::get('/services', [AdminController::class, 'services'])->name('services');
+        Route::get('/messages', [AdminController::class, 'messages'])->name('messages');
     });
 
     Route::get('/login', [AdminController::class, 'login'])->middleware('guest:admin')->name('login');
