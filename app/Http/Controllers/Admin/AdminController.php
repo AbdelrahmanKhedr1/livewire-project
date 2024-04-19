@@ -28,4 +28,8 @@ class AdminController extends Controller
     {
         return view('admin.counters.index');
     }
+    public function services()
+    {
+        return view('admin.services.index');
+    }
 }

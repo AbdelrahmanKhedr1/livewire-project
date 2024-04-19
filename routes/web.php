@@ -29,6 +29,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::get('/skills', [AdminController::class, 'skills'])->name('skills');
         Route::get('/subscriber', [AdminController::class, 'subscriber'])->name('subscriber');
         Route::get('/counters', [AdminController::class, 'counters'])->name('counters');
+        Route::get('/services', [AdminController::class, 'services'])->name('services');
     });
 
     Route::get('/login', [AdminController::class, 'login'])->middleware('guest:admin')->name('login');
