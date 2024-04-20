@@ -36,4 +36,8 @@ class AdminController extends Controller
     {
         return view('admin.messages.index');
     }
+    public function category()
+    {
+        return view('admin.category.index');
+    }
 }

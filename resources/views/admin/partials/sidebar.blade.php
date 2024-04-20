@@ -109,6 +109,13 @@
                             <div data-i18n="Analytics">Messages</div>
                         </a>
                     </li>
+                    <!-- Category -->
+                    <li class="menu-item @yield('category-active')">
+                        <a href="{{route('admin.category')}}" class="menu-link">
+                            <i class='menu-icon tf-icons bx bx-category-alt' ></i>
+                            <div data-i18n="Analytics">Category</div>
+                        </a>
+                    </li>
 
                     <li class="menu-header small text-uppercase">
                         <span class="menu-header-text">Pages</span>

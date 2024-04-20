@@ -31,6 +31,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::get('/counters', [AdminController::class, 'counters'])->name('counters');
         Route::get('/services', [AdminController::class, 'services'])->name('services');
         Route::get('/messages', [AdminController::class, 'messages'])->name('messages');
+        Route::get('/category', [AdminController::class, 'category'])->name('category');
     });
 
     Route::get('/login', [AdminController::class, 'login'])->middleware('guest:admin')->name('login');
