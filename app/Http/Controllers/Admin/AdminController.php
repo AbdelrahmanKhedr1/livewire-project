@@ -40,4 +40,8 @@ class AdminController extends Controller
     {
         return view('admin.category.index');
     }
+    public function projects()
+    {
+        return view('admin.projects.index');
+    }
 }
