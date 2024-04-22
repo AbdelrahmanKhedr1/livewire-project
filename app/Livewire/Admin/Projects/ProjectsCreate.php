@@ -19,7 +19,7 @@ class ProjectsCreate extends Component
             'name' => ['required','string','min:1','max:200'],
             'description'=>['required','string'],
             'image'=>['required','image'],
-            'link'=>['required','url'],
+            'link'=>['nullable','url'],
             'category_id'=>['required','numeric','exists:categories,id'],
         ];
     }
